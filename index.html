@@ -65,7 +65,7 @@
                 <h3>Confirme sua presença até 15/04/2025</h3>
                 <button id="rsvpButton" class="button">Confirmar Presença</button>
                 <div id="rsvpForm" class="rsvp-form">
-                    <form>
+                    <form action="https://formspree.io/f/mblgaayg" method="POST">
                         <div class="form-group">
                             <label for="name">Nome:</label>
                             <input type="text" id="name" name="name" required>
@@ -81,12 +81,15 @@
                         <div class="form-group">
                             <label>Confirma presença?</label>
                             <div class="radio-group">
-                                <input type="radio" id="yes" name="confirm" value="yes" checked>
+                                <input type="radio" id="yes" name="confirm" value="Sim" checked>
                                 <label for="yes">Sim</label>
-                                <input type="radio" id="no" name="confirm" value="no">
+                                <input type="radio" id="no" name="confirm" value="Não">
                                 <label for="no">Não</label>
                             </div>
                         </div>
+                        <input type="hidden" name="_subject" value="RSVP - Aniversário da Olivia">
+                        <input type="hidden" name="_language" value="pt">
+                        <input type="hidden" name="_next" value="obrigado.html">
                         <button type="submit" class="button submit-button">Enviar</button>
                     </form>
                 </div>

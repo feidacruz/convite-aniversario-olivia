@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela Confirmação - Aniversário da Olivia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            overflow: hidden; /* Evita a barra de rolagem */
+        }
+        
+        .thank-you-container {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .thank-you-title {
+            font-family: 'Pacifico', cursive;
+            color: #ff85a2;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-message {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #a7e9af;
+            color: #3a7240;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-button:hover {
+            background-color: #8ed89d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="thank-you-container animate__animated animate__fadeIn">
+                <h1 class="thank-you-title">Obrigado pela Confirmação!</h1>
+                <p class="thank-you-message">Sua presença é muito importante para a Olivia neste dia tão especial.</p>
+                <p class="thank-you-message">Aguardamos você no dia 26/04/2025 às 13:00h.</p>
+                <div class="photo-container">
+                    <img src="public/images/olivia-photo.jpg" alt="Foto da Olivia" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <a href="index.html" class="back-button">Voltar ao Convite</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Iniciar os confetes quando a página carregar
+        window.addEventListener('load', function() {
+            // Criar uma chuva de confetes com a biblioteca canvas-confetti
+            if (typeof confetti === 'function') {
+                // Primeiro disparo - mais intenso
+                confetti({
+                    particleCount: 200,
+                    spread: 180,
+                    origin: { y: -0.1, x: 0.5 },
+                    gravity: 1.2,
+                    scalar: 1.2,
+                    drift: 0,
+                    ticks: 300
+                });
+                
+                // Configurar disparos periódicos de confetes
+                setInterval(function() {
+                    confetti({
+                        particleCount: 100,
+                        spread: 150,
+                        origin: { y: -0.1, x: 0.5 },
+                        gravity: 1.2,
+                        scalar: 1,
+                        drift: 0,
+                        ticks: 200
+                    });
+                }, 5000); // Repetir a cada 5 segundos
+            }
+        });
+    </script>
+    
+    <!-- Adicionar a biblioteca de confetes para o efeito de chuva -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html> 

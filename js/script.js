@@ -54,28 +54,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Enviar formulário de RSVP
     if (rsvpSubmitButton) {
-        rsvpSubmitButton.addEventListener('click', function(e) {
-            e.preventDefault();
+        document.querySelector('form').addEventListener('submit', function(e) {
+            // Deixamos o Formspree lidar com o envio do formulário
+            // Não precisamos prevenir o comportamento padrão ou lidar com a submissão manualmente
+            
+            // Você pode adicionar alguma lógica adicional aqui, se desejar
+            // Por exemplo, validações extras antes de enviar
             
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
-            const guests = document.getElementById('guests').value;
-            const confirmYes = document.getElementById('yes').checked;
             
             if (!name || !phone) {
+                e.preventDefault(); // Impedir envio se campos obrigatórios estiverem vazios
                 alert('Por favor, preencha todos os campos obrigatórios.');
-                return;
+                return false;
             }
             
-            // Aqui você pode adicionar código para enviar os dados para um servidor
-            // Exemplo: fetch(), axios.post(), etc.
+            // Exibir animação de carregamento ou mensagem se desejar
+            rsvpButton.textContent = 'Enviando...';
+            rsvpButton.disabled = true;
             
-            alert('Obrigado pela confirmação, ' + name + '! Sua presença é muito importante para a Olivia.');
-            
-            // Resetar formulário
-            document.querySelector('form').reset();
-            rsvpForm.style.display = 'none';
-            rsvpButton.textContent = 'Confirmar Presença';
+            // O Formspree cuidará do resto, incluindo o redirecionamento para a página de obrigado
+            return true;
         });
     }
     
