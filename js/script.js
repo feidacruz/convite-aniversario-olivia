@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function initPuzzle() {
         // Limpar o elemento do quebra-cabeça
         puzzleElement.innerHTML = '';
+        puzzlePieces = [];
         
         // Definir o array de posições corretas (0-3 para um quebra-cabeça 2x2)
         correctOrder = [0, 1, 2, 3];
@@ -99,24 +100,17 @@ document.addEventListener('DOMContentLoaded', function() {
             piece.dataset.currentPosition = currentOrder[i];
             
             // Calcular a posição de background para cada peça
-            const correctPos = parseInt(piece.dataset.correctPosition);
-            const row = Math.floor(correctPos / puzzleSize);
-            const col = correctPos % puzzleSize;
+            const currentPos = parseInt(piece.dataset.currentPosition);
+            const row = Math.floor(currentPos / puzzleSize);
+            const col = currentPos % puzzleSize;
             
-            // Definir o background para simular uma imagem cortada em peças
-            // Aqui estamos usando cores diferentes para representar as peças
-            // Em um cenário real, você usaria uma imagem real
-            const colors = ['#ffd3b6', '#a7e9af', '#d3c0f9', '#ff9a8c'];
-            piece.style.backgroundColor = colors[correctPos];
-            
-            // Quando estiver usando uma imagem real:
-            // piece.style.backgroundImage = 'url("/public/images/olivia-photo.jpg")';
-            // piece.style.backgroundPosition = `${-col * 100}% ${-row * 100}%`;
+            // Definir o background para cada peça
+            piece.style.backgroundImage = 'url("public/images/olivia-photo.jpg")';
+            piece.style.backgroundPosition = `${col * 100}% ${row * 100}%`;
+            piece.style.backgroundSize = `${puzzleSize * 100}% ${puzzleSize * 100}%`;
             
             // Adicionar listener de clique para as peças
             piece.addEventListener('click', function() {
-                // Aqui você implementaria a lógica para mover as peças
-                // ou trocar duas peças selecionadas
                 togglePiece(this);
             });
             
@@ -160,10 +154,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Função para trocar duas peças
     function swapPieces(piece1, piece2) {
-        // Trocar as posições atuais
+        // Trocar as posições atuais nos datasets
         const tempPos = piece1.dataset.currentPosition;
         piece1.dataset.currentPosition = piece2.dataset.currentPosition;
         piece2.dataset.currentPosition = tempPos;
+        
+        // Atualizar visualmente as peças trocando seus backgrounds
+        const tempBgPosition = piece1.style.backgroundPosition;
+        piece1.style.backgroundPosition = piece2.style.backgroundPosition;
+        piece2.style.backgroundPosition = tempBgPosition;
         
         // Atualizar a ordem atual
         currentOrder = puzzlePieces.map(piece => parseInt(piece.dataset.currentPosition));
@@ -174,11 +173,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const isComplete = currentOrder.every((position, index) => position === index);
         
         if (isComplete) {
+            // Adicionar efeito de comemoração em cada peça
+            puzzlePieces.forEach((piece, index) => {
+                setTimeout(() => {
+                    piece.style.transform = 'scale(1.05)';
+                    piece.style.boxShadow = '0 0 15px #FFD700';
+                    
+                    setTimeout(() => {
+                        piece.style.transform = '';
+                        piece.style.boxShadow = '0 3px 6px rgba(0, 0, 0, 0.1)';
+                    }, 500);
+                }, index * 100);
+            });
+            
+            // Lançar confete quando completar o quebra-cabeça
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+            
             setTimeout(() => {
                 alert('Parabéns! Você completou o quebra-cabeça da Olivia! 🎉');
                 // Opcionalmente, fechar o modal após completar
                 // puzzleContainer.style.display = 'none';
-            }, 500);
+            }, puzzlePieces.length * 100 + 800);
         }
     }
 });

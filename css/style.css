@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(135deg, #e8fcf1, #a7e9af);
+    background: linear-gradient(135deg, #e8fcf1, #4B6F44);
     background-attachment: fixed;
     color: #333;
     line-height: 1.6;
@@ -251,6 +251,8 @@ h1 {
     max-width: 300px;
     margin: 15px auto;
     aspect-ratio: 1/1;
+    background-color: #f9f9f9;
+    padding: 5px;
 }
 
 .puzzle-piece {
@@ -258,7 +260,11 @@ h1 {
     background-size: 200% 200%;
     cursor: pointer;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-position 0.5s ease, box-shadow 0.3s ease;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
 }
 
 .puzzle-piece:hover {
