@@ -1,0 +1,386 @@
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #e8fcf1, #a7e9af);
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* Elementos com tema de jardim */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: url('../public/images/garden-header.svg') no-repeat center bottom;
+    background-size: cover;
+    z-index: 0;
+    opacity: 0.15;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: url('../public/images/flowers.svg') no-repeat center bottom;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    padding: 30px 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff85a2;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.photo-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #a7e9af;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 1rem;
+}
+
+.photo-placeholder .smaller {
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+.name {
+    font-family: 'Pacifico', cursive;
+    color: #6c81ff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Informações */
+.info {
+    padding: 10px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.theme {
+    background-color: #fff8e6;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px dashed #ffd3b6;
+}
+
+.theme h3 {
+    color: #ff9a8c;
+    font-size: 1.3rem;
+}
+
+.details {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.detail-item p {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+/* Seção Interativa */
+.interactive-section {
+    padding: 20px 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.interactive-section h3 {
+    color: #6c81ff;
+    margin-bottom: 15px;
+}
+
+.button {
+    background-color: #a7e9af;
+    color: #3a7240;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #8ed89d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Puzzle */
+.puzzle-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.close-puzzle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.puzzle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    aspect-ratio: 1/1;
+}
+
+.puzzle-piece {
+    border-radius: 5px;
+    background-size: 200% 200%;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.puzzle-piece:hover {
+    transform: scale(0.98);
+}
+
+.puzzle-controls {
+    margin-top: 15px;
+}
+
+/* RSVP */
+.rsvp {
+    padding: 20px 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.rsvp h3 {
+    color: #ff85a2;
+    margin-bottom: 15px;
+}
+
+.rsvp-form {
+    display: none;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group input {
+    width: auto;
+    margin-right: 5px;
+}
+
+.radio-group label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.submit-button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px 30px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer p {
+    color: #888;
+}
+
+.footer .small {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* Animações adicionais */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.name {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+    
+    .photo-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .detail-item p {
+        font-size: 0.85rem;
+    }
+} 

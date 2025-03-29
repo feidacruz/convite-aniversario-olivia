@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1º Aniversário da Olivia - Jardim Encantado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header animate__animated animate__fadeIn">
+                <h1>Você está convidado para o meu primeiro aninho!</h1>
+                <div class="photo-container">
+                    <!-- Aqui será colocada a foto da Olivia -->
+                    <div class="photo-placeholder">
+                        <p>Foto da Olivia</p>
+                        <p class="smaller">(Substitua por uma foto real da sua filha)</p>
+                    </div>
+                </div>
+                <h2 class="name animate__animated animate__bounceIn animate__delay-1s">Olivia</h2>
+            </div>
+            
+            <div class="info animate__animated animate__fadeIn animate__delay-1s">
+                <div class="theme">
+                    <h3>Tema: Jardim Encantado</h3>
+                </div>
+                
+                <div class="details">
+                    <div class="detail-item">
+                        <img src="public/images/calendar.svg" alt="Data" class="icon">
+                        <p>26/04/2025</p>
+                    </div>
+                    <div class="detail-item">
+                        <img src="public/images/clock.svg" alt="Horário" class="icon">
+                        <p>13:00h</p>
+                    </div>
+                    <div class="detail-item">
+                        <img src="public/images/location.svg" alt="Local" class="icon">
+                        <p>Av Hilário Pereira de Souza 492 - Osasco / Condominio Jardins do Brasil - Salão de festas infantil Sub condomínio Amazônia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="interactive-section animate__animated animate__fadeIn animate__delay-2s">
+                <h3>Venha se divertir comigo!</h3>
+                <button id="puzzleButton" class="button">Jogar Quebra-Cabeça</button>
+            </div>
+            
+            <div id="puzzleContainer" class="puzzle-container">
+                <div class="puzzle-overlay">
+                    <div class="puzzle-content">
+                        <span class="close-puzzle">&times;</span>
+                        <h3>Quebra-Cabeça da Olivia</h3>
+                        <div id="puzzle" class="puzzle"></div>
+                        <div class="puzzle-controls">
+                            <button id="resetPuzzle" class="button">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rsvp animate__animated animate__fadeIn animate__delay-2s">
+                <h3>Confirme sua presença até 15/04/2025</h3>
+                <button id="rsvpButton" class="button">Confirmar Presença</button>
+                <div id="rsvpForm" class="rsvp-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Número de acompanhantes:</label>
+                            <input type="number" id="guests" name="guests" min="0" max="5" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirma presença?</label>
+                            <div class="radio-group">
+                                <input type="radio" id="yes" name="confirm" value="yes" checked>
+                                <label for="yes">Sim</label>
+                                <input type="radio" id="no" name="confirm" value="no">
+                                <label for="no">Não</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="button submit-button">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer animate__animated animate__fadeIn animate__delay-3s">
+                <p>Esperamos por você no meu dia especial!</p>
+                <p class="small">Desenvolvido com ❤️ para Olivia</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" fill="none">
+    <!-- Grama -->
+    <rect x="0" y="50" width="1200" height="50" fill="#a7e9af"/>
+    
+    <!-- Flores -->
+    <g transform="translate(50, 40)">
+        <circle cx="0" cy="0" r="10" fill="#FF85A2"/>
+        <circle cx="0" cy="0" r="5" fill="#FF9FBA"/>
+        <rect x="-2" y="10" width="4" height="40" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(150, 30)">
+        <circle cx="-8" cy="-8" r="10" fill="#FFD3B6"/>
+        <circle cx="0" cy="0" r="10" fill="#FFD3B6"/>
+        <circle cx="8" cy="-8" r="10" fill="#FFD3B6"/>
+        <circle cx="0" cy="-15" r="10" fill="#FFD3B6"/>
+        <circle cx="0" cy="-7" r="8" fill="#FFE1CC"/>
+        <rect x="-2" y="10" width="4" height="40" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(250, 40)">
+        <circle cx="0" cy="0" r="12" fill="#D3C0F9"/>
+        <circle cx="0" cy="0" r="6" fill="#E1D4FC"/>
+        <rect x="-2" y="12" width="4" height="38" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(350, 35)">
+        <path d="M 0 0 L -10 -10 L -5 -20 L 5 -20 L 10 -10 Z" fill="#FF9A8C"/>
+        <circle cx="0" cy="0" r="5" fill="#FFBCB3"/>
+        <rect x="-2" y="5" width="4" height="45" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(450, 40)">
+        <circle cx="-8" cy="-8" r="8" fill="#A7E9AF"/>
+        <circle cx="0" cy="0" r="8" fill="#A7E9AF"/>
+        <circle cx="8" cy="-8" r="8" fill="#A7E9AF"/>
+        <circle cx="0" cy="-12" r="8" fill="#A7E9AF"/>
+        <circle cx="0" cy="-6" r="6" fill="#C1F0C7"/>
+        <rect x="-2" y="8" width="4" height="42" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(550, 30)">
+        <circle cx="0" cy="0" r="15" fill="#FF85A2"/>
+        <circle cx="0" cy="0" r="8" fill="#FF9FBA"/>
+        <rect x="-2" y="15" width="4" height="35" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(650, 40)">
+        <path d="M 0 0 L -15 -10 L -7 -25 L 7 -25 L 15 -10 Z" fill="#6C81FF"/>
+        <circle cx="0" cy="-5" r="7" fill="#8999FF"/>
+        <rect x="-2" y="5" width="4" height="45" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(750, 35)">
+        <circle cx="-10" cy="-10" r="12" fill="#FFD3B6"/>
+        <circle cx="0" cy="0" r="12" fill="#FFD3B6"/>
+        <circle cx="10" cy="-10" r="12" fill="#FFD3B6"/>
+        <circle cx="0" cy="-17" r="12" fill="#FFD3B6"/>
+        <circle cx="0" cy="-8" r="9" fill="#FFE1CC"/>
+        <rect x="-2" y="12" width="4" height="38" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(850, 40)">
+        <circle cx="0" cy="0" r="10" fill="#D3C0F9"/>
+        <circle cx="0" cy="0" r="5" fill="#E1D4FC"/>
+        <rect x="-2" y="10" width="4" height="40" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(950, 35)">
+        <circle cx="-8" cy="-8" r="10" fill="#FF9A8C"/>
+        <circle cx="0" cy="0" r="10" fill="#FF9A8C"/>
+        <circle cx="8" cy="-8" r="10" fill="#FF9A8C"/>
+        <circle cx="0" cy="-15" r="10" fill="#FF9A8C"/>
+        <circle cx="0" cy="-7" r="8" fill="#FFBCB3"/>
+        <rect x="-2" y="10" width="4" height="40" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(1050, 40)">
+        <circle cx="0" cy="0" r="12" fill="#A7E9AF"/>
+        <circle cx="0" cy="0" r="6" fill="#C1F0C7"/>
+        <rect x="-2" y="12" width="4" height="38" fill="#7EAA92"/>
+    </g>
+    
+    <g transform="translate(1150, 30)">
+        <path d="M 0 0 L -10 -10 L -5 -20 L 5 -20 L 10 -10 Z" fill="#FF85A2"/>
+        <circle cx="0" cy="0" r="5" fill="#FF9FBA"/>
+        <rect x="-2" y="5" width="4" height="45" fill="#7EAA92"/>
+    </g>
+    
+    <!-- Borboletas -->
+    <g transform="translate(400, 15)">
+        <path d="M 0 0 Q 10 -10 7 -18 Q 3 -22 0 -18 Q -3 -22 -7 -18 Q -10 -10 0 0" fill="#FFD3B6"/>
+        <path d="M 0 0 Q 10 10 7 18 Q 3 22 0 18 Q -3 22 -7 18 Q -10 10 0 0" fill="#FFD3B6"/>
+        <line x1="0" y1="-3" x2="0" y2="10" stroke="#7EAA92" stroke-width="1.5"/>
+    </g>
+    
+    <g transform="translate(800, 10)">
+        <path d="M 0 0 Q 12 -12 8 -20 Q 4 -25 0 -20 Q -4 -25 -8 -20 Q -12 -12 0 0" fill="#A7E9AF"/>
+        <path d="M 0 0 Q 12 12 8 20 Q 4 25 0 20 Q -4 25 -8 20 Q -12 12 0 0" fill="#A7E9AF"/>
+        <line x1="0" y1="-3" x2="0" y2="10" stroke="#7EAA92" stroke-width="1.5"/>
+    </g>
+</svg> 

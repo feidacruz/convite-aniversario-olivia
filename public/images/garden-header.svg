@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" fill="none">
+    <!-- Fundo de céu -->
+    <rect width="1200" height="300" fill="#e8fcf1"/>
+    
+    <!-- Sol -->
+    <circle cx="1000" cy="80" r="60" fill="#FFD55A"/>
+    <circle cx="1000" cy="80" r="50" fill="#FFE082"/>
+    
+    <!-- Gramado -->
+    <path d="M0 200 Q 300 180 600 200 Q 900 220 1200 200 L 1200 300 L 0 300 Z" fill="#a7e9af"/>
+    
+    <!-- Flores -->
+    <g transform="translate(100, 220)">
+        <circle cx="0" cy="0" r="8" fill="#FF85A2"/>
+        <circle cx="0" cy="-8" r="5" fill="#FF9FBA"/>
+        <rect x="-2" y="8" width="4" height="20" fill="#7EAA92"/>
+        <path d="M 0 8 Q -10 15 -15 25" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 8 Q 10 15 15 25" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(200, 230)">
+        <circle cx="0" cy="0" r="10" fill="#D3C0F9"/>
+        <circle cx="0" cy="-10" r="6" fill="#E1D4FC"/>
+        <rect x="-2" y="10" width="4" height="25" fill="#7EAA92"/>
+        <path d="M 0 10 Q -15 20 -20 30" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 10 Q 15 20 20 30" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(350, 210)">
+        <circle cx="0" cy="0" r="12" fill="#FFD3B6"/>
+        <circle cx="0" cy="-12" r="7" fill="#FFE1CC"/>
+        <rect x="-2" y="12" width="4" height="30" fill="#7EAA92"/>
+        <path d="M 0 12 Q -12 22 -18 35" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 12 Q 12 22 18 35" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(500, 225)">
+        <circle cx="0" cy="0" r="9" fill="#A7E9AF"/>
+        <circle cx="0" cy="-9" r="5" fill="#C1F0C7"/>
+        <rect x="-2" y="9" width="4" height="22" fill="#7EAA92"/>
+        <path d="M 0 9 Q -12 18 -16 28" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 9 Q 12 18 16 28" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(650, 215)">
+        <circle cx="0" cy="0" r="10" fill="#FF9A8C"/>
+        <circle cx="0" cy="-10" r="6" fill="#FFBCB3"/>
+        <rect x="-2" y="10" width="4" height="25" fill="#7EAA92"/>
+        <path d="M 0 10 Q -12 20 -18 30" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 10 Q 12 20 18 30" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(800, 230)">
+        <circle cx="0" cy="0" r="11" fill="#6C81FF"/>
+        <circle cx="0" cy="-11" r="7" fill="#8999FF"/>
+        <rect x="-2" y="11" width="4" height="27" fill="#7EAA92"/>
+        <path d="M 0 11 Q -15 22 -20 32" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 11 Q 15 22 20 32" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(950, 220)">
+        <circle cx="0" cy="0" r="9" fill="#FF85A2"/>
+        <circle cx="0" cy="-9" r="5" fill="#FF9FBA"/>
+        <rect x="-2" y="9" width="4" height="22" fill="#7EAA92"/>
+        <path d="M 0 9 Q -12 18 -16 28" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 9 Q 12 18 16 28" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(1100, 210)">
+        <circle cx="0" cy="0" r="10" fill="#D3C0F9"/>
+        <circle cx="0" cy="-10" r="6" fill="#E1D4FC"/>
+        <rect x="-2" y="10" width="4" height="25" fill="#7EAA92"/>
+        <path d="M 0 10 Q -12 20 -18 30" stroke="#7EAA92" stroke-width="2"/>
+        <path d="M 0 10 Q 12 20 18 30" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <!-- Borboletas -->
+    <g transform="translate(300, 120)">
+        <path d="M 0 0 Q 15 -15 10 -25 Q 5 -30 0 -25 Q -5 -30 -10 -25 Q -15 -15 0 0" fill="#FFD3B6"/>
+        <path d="M 0 0 Q 15 15 10 25 Q 5 30 0 25 Q -5 30 -10 25 Q -15 15 0 0" fill="#FFD3B6"/>
+        <path d="M 0 -5 L 0 15" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+    
+    <g transform="translate(700, 100)">
+        <path d="M 0 0 Q 18 -18 12 -30 Q 6 -35 0 -30 Q -6 -35 -12 -30 Q -18 -18 0 0" fill="#A7E9AF"/>
+        <path d="M 0 0 Q 18 18 12 30 Q 6 35 0 30 Q -6 35 -12 30 Q -18 18 0 0" fill="#A7E9AF"/>
+        <path d="M 0 -5 L 0 15" stroke="#7EAA92" stroke-width="2"/>
+    </g>
+</svg> 
