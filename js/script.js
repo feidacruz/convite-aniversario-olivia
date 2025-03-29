@@ -54,13 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Enviar formulário de RSVP
     if (rsvpSubmitButton) {
-        document.querySelector('form').addEventListener('submit', function(e) {
-            // Deixamos o Formspree lidar com o envio do formulário
-            // Não precisamos prevenir o comportamento padrão ou lidar com a submissão manualmente
-            
-            // Você pode adicionar alguma lógica adicional aqui, se desejar
-            // Por exemplo, validações extras antes de enviar
-            
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            // Validação básica
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             
@@ -70,11 +66,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 return false;
             }
             
-            // Exibir animação de carregamento ou mensagem se desejar
-            rsvpButton.textContent = 'Enviando...';
-            rsvpButton.disabled = true;
+            // Armazenar o botão de submit para referi-lo corretamente
+            const submitButton = document.getElementById('submitButton');
+            submitButton.textContent = 'Enviando...';
+            submitButton.disabled = true;
             
-            // O Formspree cuidará do resto, incluindo o redirecionamento para a página de obrigado
+            // Adicionar um timeout para voltar o botão ao normal caso haja algum problema
+            setTimeout(function() {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar';
+            }, 5000);
+            
+            // Criar uma solução de backup para o redirecionamento
+            localStorage.setItem('form_submitted', 'true');
+            
+            // Se o Formspree não redirecionar automaticamente em 3 segundos, 
+            // faça o redirecionamento manual
+            setTimeout(function() {
+                if (localStorage.getItem('form_submitted') === 'true') {
+                    localStorage.removeItem('form_submitted');
+                    window.location.href = 'obrigado.html';
+                }
+            }, 3000);
+            
             return true;
         });
     }

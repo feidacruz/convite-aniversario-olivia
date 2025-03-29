@@ -90,7 +90,9 @@
                         <input type="hidden" name="_subject" value="RSVP - Aniversário da Olivia">
                         <input type="hidden" name="_language" value="pt">
                         <input type="hidden" name="_next" value="obrigado.html">
-                        <button type="submit" class="button submit-button">Enviar</button>
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_autoresponse" value="Obrigado pela confirmação! Sua presença é muito importante para a Olivia.">
+                        <button type="submit" class="button submit-button" id="submitButton">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -104,5 +106,16 @@
     
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        // Verificar se o usuário está voltando da página do Formspree
+        window.addEventListener('load', function() {
+            // Se houver uma flag indicando que o formulário foi enviado
+            if (localStorage.getItem('form_submitted') === 'true') {
+                // Redirecione para a página de agradecimento
+                localStorage.removeItem('form_submitted');
+                window.location.href = 'obrigado.html';
+            }
+        });
+    </script>
 </body>
 </html> 

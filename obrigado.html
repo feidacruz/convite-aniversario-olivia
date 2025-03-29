@@ -67,8 +67,11 @@
     </div>
     
     <script>
-        // Iniciar os confetes quando a página carregar
+        // Limpar o localStorage quando a página de agradecimento for carregada
         window.addEventListener('load', function() {
+            // Remover a flag de formulário enviado
+            localStorage.removeItem('form_submitted');
+            
             // Criar uma chuva de confetes com a biblioteca canvas-confetti
             if (typeof confetti === 'function') {
                 // Primeiro disparo - mais intenso
