@@ -99,16 +99,5 @@
     
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script>
-        // Verificar se o usuário está voltando da página do Formspree
-        window.addEventListener('load', function() {
-            // Se houver uma flag indicando que o formulário foi enviado
-            if (localStorage.getItem('form_submitted') === 'true') {
-                // Redirecione para a página de agradecimento
-                localStorage.removeItem('form_submitted');
-                window.location.href = 'obrigado.html';
-            }
-        });
-    </script>
 </body>
 </html> 

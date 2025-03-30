@@ -56,11 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (rsvpSubmitButton) {
         const form = document.querySelector('form');
         form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevenir o envio padrão do formulário
+            
             // Validação básica
             const name = document.getElementById('name').value;
             
             if (!name) {
-                e.preventDefault(); // Impedir envio se campos obrigatórios estiverem vazios
                 alert('Por favor, preencha o nome.');
                 return false;
             }
@@ -70,25 +71,33 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.textContent = 'Enviando...';
             submitButton.disabled = true;
             
-            // Adicionar um timeout para voltar o botão ao normal caso haja algum problema
-            setTimeout(function() {
+            // Coletar os dados do formulário
+            const formData = new FormData(form);
+            
+            // Enviar o formulário via AJAX
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Redirecionar para a página de agradecimento
+                    window.location.href = 'obrigado.html';
+                } else {
+                    throw new Error('Erro ao enviar formulário');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
                 submitButton.disabled = false;
                 submitButton.textContent = 'Enviar';
-            }, 5000);
+            });
             
-            // Criar uma solução de backup para o redirecionamento
-            localStorage.setItem('form_submitted', 'true');
-            
-            // Se o Formspree não redirecionar automaticamente em 3 segundos, 
-            // faça o redirecionamento manual
-            setTimeout(function() {
-                if (localStorage.getItem('form_submitted') === 'true') {
-                    localStorage.removeItem('form_submitted');
-                    window.location.href = 'obrigado.html';
-                }
-            }, 3000);
-            
-            return true;
+            return false;
         });
     }
     
