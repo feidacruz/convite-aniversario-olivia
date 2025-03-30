@@ -58,11 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             // Validação básica
             const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
             
-            if (!name || !phone) {
+            if (!name) {
                 e.preventDefault(); // Impedir envio se campos obrigatórios estiverem vazios
-                alert('Por favor, preencha todos os campos obrigatórios.');
+                alert('Por favor, preencha o nome.');
                 return false;
             }
             
